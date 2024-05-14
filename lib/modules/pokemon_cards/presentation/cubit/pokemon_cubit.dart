@@ -32,7 +32,7 @@ class PokemonCubit extends Cubit<PokemonState> {
     final result = await getIndiviPokemonUsecase.call(id);
     result.fold(
       (failure) => emit(PokemonState.error(failure)),
-      (pokemon) => emit(PokemonState.loaded([pokemon])),
+      (pokemon) => emit(PokemonState.loadIndividual(pokemon)),
     );
   }
 }

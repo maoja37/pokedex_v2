@@ -5,8 +5,8 @@ import 'package:pokedex_v2/app_provider.dart';
 import 'package:pokedex_v2/global/routes/app_router.gr.dart';
 
 void main() async {
-
-  await AppManager.initialize;
+WidgetsFlutterBinding.ensureInitialized(); // 
+  await AppManager.initialize();
   runApp(const MyApp());
 }
 
@@ -24,6 +24,7 @@ class _MyAppState extends State<MyApp> {
     return MultiBlocProvider(
       providers: AppProvider.getList(),
       child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

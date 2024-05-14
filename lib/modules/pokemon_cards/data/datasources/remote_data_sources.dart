@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:pokedex_v2/global/network/api_eror.dart';
 import 'package:pokedex_v2/global/network/endpoint.dart';
@@ -21,10 +20,12 @@ class PokemonRemoteDataSourceImpl implements PokemonRemoteDataSource {
     List<PokemonEntity> pokemonList = [];
     try {
       final response = await networkProvider.call(
-          path: Endpoint.cards, method: RequestMethod.get);
+          path: Endpoint.cards,
+          method: RequestMethod.get,
+          queryParameters: {'pageSize': 20});
 
       if (response!.statusCode == 200) {
-        final data = jsonDecode(response.data['data']);
+        final data = response.data["data"];
         if (data is List) {
           pokemonList = data.map((e) => PokemonEntity.fromJson(e)).toList();
         } else {
@@ -48,7 +49,7 @@ class PokemonRemoteDataSourceImpl implements PokemonRemoteDataSource {
           path: '${Endpoint.cards}/$id', method: RequestMethod.get);
 
       if (response!.statusCode == 200) {
-        pokemon = PokemonEntity.fromJson(response.data);
+        pokemon = PokemonEntity.fromJson(response.data["data"]);
       }
     } catch (e) {
       throw ApiError.fromDioError(e);

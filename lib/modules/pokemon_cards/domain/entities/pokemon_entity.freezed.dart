@@ -20,10 +20,13 @@ PokemonEntity _$PokemonEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PokemonEntity {
-  String get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  Images get images => throw _privateConstructorUsedError;
-  List<AbilityEntity> get abilities => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  Images? get images => throw _privateConstructorUsedError;
+  String? get level => throw _privateConstructorUsedError;
+  String? get supertype => throw _privateConstructorUsedError;
+  String? get hp => throw _privateConstructorUsedError;
+  List<AbilityEntity>? get abilities => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,9 +41,15 @@ abstract class $PokemonEntityCopyWith<$Res> {
       _$PokemonEntityCopyWithImpl<$Res, PokemonEntity>;
   @useResult
   $Res call(
-      {String id, String name, Images images, List<AbilityEntity> abilities});
+      {String? id,
+      String? name,
+      Images? images,
+      String? level,
+      String? supertype,
+      String? hp,
+      List<AbilityEntity>? abilities});
 
-  $ImagesCopyWith<$Res> get images;
+  $ImagesCopyWith<$Res>? get images;
 }
 
 /// @nodoc
@@ -56,35 +65,54 @@ class _$PokemonEntityCopyWithImpl<$Res, $Val extends PokemonEntity>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? images = null,
-    Object? abilities = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? images = freezed,
+    Object? level = freezed,
+    Object? supertype = freezed,
+    Object? hp = freezed,
+    Object? abilities = freezed,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      images: null == images
+              as String?,
+      images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as Images,
-      abilities: null == abilities
+              as Images?,
+      level: freezed == level
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as String?,
+      supertype: freezed == supertype
+          ? _value.supertype
+          : supertype // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hp: freezed == hp
+          ? _value.hp
+          : hp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      abilities: freezed == abilities
           ? _value.abilities
           : abilities // ignore: cast_nullable_to_non_nullable
-              as List<AbilityEntity>,
+              as List<AbilityEntity>?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ImagesCopyWith<$Res> get images {
-    return $ImagesCopyWith<$Res>(_value.images, (value) {
+  $ImagesCopyWith<$Res>? get images {
+    if (_value.images == null) {
+      return null;
+    }
+
+    return $ImagesCopyWith<$Res>(_value.images!, (value) {
       return _then(_value.copyWith(images: value) as $Val);
     });
   }
@@ -99,10 +127,16 @@ abstract class _$$PokemonEntityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String name, Images images, List<AbilityEntity> abilities});
+      {String? id,
+      String? name,
+      Images? images,
+      String? level,
+      String? supertype,
+      String? hp,
+      List<AbilityEntity>? abilities});
 
   @override
-  $ImagesCopyWith<$Res> get images;
+  $ImagesCopyWith<$Res>? get images;
 }
 
 /// @nodoc
@@ -116,28 +150,43 @@ class __$$PokemonEntityImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? name = null,
-    Object? images = null,
-    Object? abilities = null,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? images = freezed,
+    Object? level = freezed,
+    Object? supertype = freezed,
+    Object? hp = freezed,
+    Object? abilities = freezed,
   }) {
     return _then(_$PokemonEntityImpl(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
+              as String?,
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      images: null == images
+              as String?,
+      images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as Images,
-      abilities: null == abilities
+              as Images?,
+      level: freezed == level
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as String?,
+      supertype: freezed == supertype
+          ? _value.supertype
+          : supertype // ignore: cast_nullable_to_non_nullable
+              as String?,
+      hp: freezed == hp
+          ? _value.hp
+          : hp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      abilities: freezed == abilities
           ? _value._abilities
           : abilities // ignore: cast_nullable_to_non_nullable
-              as List<AbilityEntity>,
+              as List<AbilityEntity>?,
     ));
   }
 }
@@ -149,29 +198,40 @@ class _$PokemonEntityImpl implements _PokemonEntity {
       {required this.id,
       required this.name,
       required this.images,
-      required final List<AbilityEntity> abilities})
+      required this.level,
+      required this.supertype,
+      required this.hp,
+      required final List<AbilityEntity>? abilities})
       : _abilities = abilities;
 
   factory _$PokemonEntityImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonEntityImplFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
   @override
-  final Images images;
-  final List<AbilityEntity> _abilities;
+  final Images? images;
   @override
-  List<AbilityEntity> get abilities {
+  final String? level;
+  @override
+  final String? supertype;
+  @override
+  final String? hp;
+  final List<AbilityEntity>? _abilities;
+  @override
+  List<AbilityEntity>? get abilities {
+    final value = _abilities;
+    if (value == null) return null;
     if (_abilities is EqualUnmodifiableListView) return _abilities;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_abilities);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
   String toString() {
-    return 'PokemonEntity(id: $id, name: $name, images: $images, abilities: $abilities)';
+    return 'PokemonEntity(id: $id, name: $name, images: $images, level: $level, supertype: $supertype, hp: $hp, abilities: $abilities)';
   }
 
   @override
@@ -182,14 +242,18 @@ class _$PokemonEntityImpl implements _PokemonEntity {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.images, images) || other.images == images) &&
+            (identical(other.level, level) || other.level == level) &&
+            (identical(other.supertype, supertype) ||
+                other.supertype == supertype) &&
+            (identical(other.hp, hp) || other.hp == hp) &&
             const DeepCollectionEquality()
                 .equals(other._abilities, _abilities));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, images,
-      const DeepCollectionEquality().hash(_abilities));
+  int get hashCode => Object.hash(runtimeType, id, name, images, level,
+      supertype, hp, const DeepCollectionEquality().hash(_abilities));
 
   @JsonKey(ignore: true)
   @override
@@ -207,22 +271,31 @@ class _$PokemonEntityImpl implements _PokemonEntity {
 
 abstract class _PokemonEntity implements PokemonEntity {
   const factory _PokemonEntity(
-      {required final String id,
-      required final String name,
-      required final Images images,
-      required final List<AbilityEntity> abilities}) = _$PokemonEntityImpl;
+      {required final String? id,
+      required final String? name,
+      required final Images? images,
+      required final String? level,
+      required final String? supertype,
+      required final String? hp,
+      required final List<AbilityEntity>? abilities}) = _$PokemonEntityImpl;
 
   factory _PokemonEntity.fromJson(Map<String, dynamic> json) =
       _$PokemonEntityImpl.fromJson;
 
   @override
-  String get id;
+  String? get id;
   @override
-  String get name;
+  String? get name;
   @override
-  Images get images;
+  Images? get images;
   @override
-  List<AbilityEntity> get abilities;
+  String? get level;
+  @override
+  String? get supertype;
+  @override
+  String? get hp;
+  @override
+  List<AbilityEntity>? get abilities;
   @override
   @JsonKey(ignore: true)
   _$$PokemonEntityImplCopyWith<_$PokemonEntityImpl> get copyWith =>

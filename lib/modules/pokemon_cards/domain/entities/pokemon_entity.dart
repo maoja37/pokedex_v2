@@ -6,36 +6,37 @@ part 'pokemon_entity.g.dart';
 @freezed
 class PokemonEntity with _$PokemonEntity {
   const factory PokemonEntity({
-    required String id,
-    required String name,
-    required Images images,
-    required List<AbilityEntity> abilities,
+    required String? id,
+    required String? name,
+    required Images? images,
+    required String? level,
+    required String? supertype,
+    required String? hp,
+    required List<AbilityEntity>? abilities,
   }) = _PokemonEntity;
 
-  factory PokemonEntity.fromJson(Map<String, dynamic> json) => _$PokemonEntityFromJson(json);
-
+  factory PokemonEntity.fromJson(Map<String, dynamic> json) =>
+      _$PokemonEntityFromJson(json);
 }
 
-
 @freezed
-class AbilityEntity with _$AbilityEntity{
+class AbilityEntity with _$AbilityEntity {
   const factory AbilityEntity({
     required String name,
     required String text,
     required String type,
   }) = _AbilityEntity;
 
-  factory AbilityEntity.fromJson(Map<String, dynamic> json) => _$AbilityEntityFromJson(json);
-
-
+  factory AbilityEntity.fromJson(Map<String, dynamic> json) =>
+      _$AbilityEntityFromJson(json);
 }
 
 @freezed
-class Images  with _$Images{
+class Images with _$Images {
   const factory Images({
     required String small,
     required String large,
   }) = _Images;
 
-factory Images.fromJson(Map<String, dynamic> json) => _$ImagesFromJson(json);
+  factory Images.fromJson(Map<String, dynamic> json) => _$ImagesFromJson(json);
 }

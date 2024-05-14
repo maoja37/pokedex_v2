@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:pokedex_v2/global/extensions/extensions.dart';
 import 'package:pokedex_v2/global/storage/app_storage_key.dart';
 import 'package:pokedex_v2/modules/pokemon_cards/domain/entities/pokemon_entity.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,7 +13,6 @@ class AppStorage {
 
    setPokemonList(List<PokemonEntity> value) {
     String jsonString = jsonEncode(value.map((e) => e.toJson()).toList());
-    'Pokemon List saved $jsonString'.log();
     _prefs.setString(AppStorageKey.pokemons.value, jsonString);
   }
 

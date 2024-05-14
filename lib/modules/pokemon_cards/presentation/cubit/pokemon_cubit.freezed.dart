@@ -21,6 +21,7 @@ mixin _$PokemonState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<PokemonEntity> pokemons) loaded,
+    required TResult Function(PokemonEntity pokemon) loadIndividual,
     required TResult Function(Failure failure) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,6 +30,7 @@ mixin _$PokemonState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<PokemonEntity> pokemons)? loaded,
+    TResult? Function(PokemonEntity pokemon)? loadIndividual,
     TResult? Function(Failure failure)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +39,7 @@ mixin _$PokemonState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<PokemonEntity> pokemons)? loaded,
+    TResult Function(PokemonEntity pokemon)? loadIndividual,
     TResult Function(Failure failure)? error,
     required TResult orElse(),
   }) =>
@@ -46,6 +49,7 @@ mixin _$PokemonState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadIndividual value) loadIndividual,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +58,7 @@ mixin _$PokemonState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadIndividual value)? loadIndividual,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +67,7 @@ mixin _$PokemonState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadIndividual value)? loadIndividual,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -127,6 +133,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<PokemonEntity> pokemons) loaded,
+    required TResult Function(PokemonEntity pokemon) loadIndividual,
     required TResult Function(Failure failure) error,
   }) {
     return initial();
@@ -138,6 +145,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<PokemonEntity> pokemons)? loaded,
+    TResult? Function(PokemonEntity pokemon)? loadIndividual,
     TResult? Function(Failure failure)? error,
   }) {
     return initial?.call();
@@ -149,6 +157,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<PokemonEntity> pokemons)? loaded,
+    TResult Function(PokemonEntity pokemon)? loadIndividual,
     TResult Function(Failure failure)? error,
     required TResult orElse(),
   }) {
@@ -164,6 +173,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadIndividual value) loadIndividual,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -175,6 +185,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadIndividual value)? loadIndividual,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -186,6 +197,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadIndividual value)? loadIndividual,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -241,6 +253,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<PokemonEntity> pokemons) loaded,
+    required TResult Function(PokemonEntity pokemon) loadIndividual,
     required TResult Function(Failure failure) error,
   }) {
     return loading();
@@ -252,6 +265,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<PokemonEntity> pokemons)? loaded,
+    TResult? Function(PokemonEntity pokemon)? loadIndividual,
     TResult? Function(Failure failure)? error,
   }) {
     return loading?.call();
@@ -263,6 +277,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<PokemonEntity> pokemons)? loaded,
+    TResult Function(PokemonEntity pokemon)? loadIndividual,
     TResult Function(Failure failure)? error,
     required TResult orElse(),
   }) {
@@ -278,6 +293,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadIndividual value) loadIndividual,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -289,6 +305,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadIndividual value)? loadIndividual,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -300,6 +317,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadIndividual value)? loadIndividual,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -387,6 +405,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<PokemonEntity> pokemons) loaded,
+    required TResult Function(PokemonEntity pokemon) loadIndividual,
     required TResult Function(Failure failure) error,
   }) {
     return loaded(pokemons);
@@ -398,6 +417,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<PokemonEntity> pokemons)? loaded,
+    TResult? Function(PokemonEntity pokemon)? loadIndividual,
     TResult? Function(Failure failure)? error,
   }) {
     return loaded?.call(pokemons);
@@ -409,6 +429,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<PokemonEntity> pokemons)? loaded,
+    TResult Function(PokemonEntity pokemon)? loadIndividual,
     TResult Function(Failure failure)? error,
     required TResult orElse(),
   }) {
@@ -424,6 +445,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadIndividual value) loadIndividual,
     required TResult Function(_Error value) error,
   }) {
     return loaded(this);
@@ -435,6 +457,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadIndividual value)? loadIndividual,
     TResult? Function(_Error value)? error,
   }) {
     return loaded?.call(this);
@@ -446,6 +469,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadIndividual value)? loadIndividual,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -462,6 +486,169 @@ abstract class _Loaded implements PokemonState {
   List<PokemonEntity> get pokemons;
   @JsonKey(ignore: true)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadIndividualImplCopyWith<$Res> {
+  factory _$$LoadIndividualImplCopyWith(_$LoadIndividualImpl value,
+          $Res Function(_$LoadIndividualImpl) then) =
+      __$$LoadIndividualImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({PokemonEntity pokemon});
+
+  $PokemonEntityCopyWith<$Res> get pokemon;
+}
+
+/// @nodoc
+class __$$LoadIndividualImplCopyWithImpl<$Res>
+    extends _$PokemonStateCopyWithImpl<$Res, _$LoadIndividualImpl>
+    implements _$$LoadIndividualImplCopyWith<$Res> {
+  __$$LoadIndividualImplCopyWithImpl(
+      _$LoadIndividualImpl _value, $Res Function(_$LoadIndividualImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pokemon = null,
+  }) {
+    return _then(_$LoadIndividualImpl(
+      null == pokemon
+          ? _value.pokemon
+          : pokemon // ignore: cast_nullable_to_non_nullable
+              as PokemonEntity,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PokemonEntityCopyWith<$Res> get pokemon {
+    return $PokemonEntityCopyWith<$Res>(_value.pokemon, (value) {
+      return _then(_value.copyWith(pokemon: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$LoadIndividualImpl implements _LoadIndividual {
+  const _$LoadIndividualImpl(this.pokemon);
+
+  @override
+  final PokemonEntity pokemon;
+
+  @override
+  String toString() {
+    return 'PokemonState.loadIndividual(pokemon: $pokemon)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadIndividualImpl &&
+            (identical(other.pokemon, pokemon) || other.pokemon == pokemon));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pokemon);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadIndividualImplCopyWith<_$LoadIndividualImpl> get copyWith =>
+      __$$LoadIndividualImplCopyWithImpl<_$LoadIndividualImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<PokemonEntity> pokemons) loaded,
+    required TResult Function(PokemonEntity pokemon) loadIndividual,
+    required TResult Function(Failure failure) error,
+  }) {
+    return loadIndividual(pokemon);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<PokemonEntity> pokemons)? loaded,
+    TResult? Function(PokemonEntity pokemon)? loadIndividual,
+    TResult? Function(Failure failure)? error,
+  }) {
+    return loadIndividual?.call(pokemon);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<PokemonEntity> pokemons)? loaded,
+    TResult Function(PokemonEntity pokemon)? loadIndividual,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
+  }) {
+    if (loadIndividual != null) {
+      return loadIndividual(pokemon);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadIndividual value) loadIndividual,
+    required TResult Function(_Error value) error,
+  }) {
+    return loadIndividual(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadIndividual value)? loadIndividual,
+    TResult? Function(_Error value)? error,
+  }) {
+    return loadIndividual?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadIndividual value)? loadIndividual,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (loadIndividual != null) {
+      return loadIndividual(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadIndividual implements PokemonState {
+  const factory _LoadIndividual(final PokemonEntity pokemon) =
+      _$LoadIndividualImpl;
+
+  PokemonEntity get pokemon;
+  @JsonKey(ignore: true)
+  _$$LoadIndividualImplCopyWith<_$LoadIndividualImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -532,6 +719,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<PokemonEntity> pokemons) loaded,
+    required TResult Function(PokemonEntity pokemon) loadIndividual,
     required TResult Function(Failure failure) error,
   }) {
     return error(failure);
@@ -543,6 +731,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<PokemonEntity> pokemons)? loaded,
+    TResult? Function(PokemonEntity pokemon)? loadIndividual,
     TResult? Function(Failure failure)? error,
   }) {
     return error?.call(failure);
@@ -554,6 +743,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<PokemonEntity> pokemons)? loaded,
+    TResult Function(PokemonEntity pokemon)? loadIndividual,
     TResult Function(Failure failure)? error,
     required TResult orElse(),
   }) {
@@ -569,6 +759,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
+    required TResult Function(_LoadIndividual value) loadIndividual,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -580,6 +771,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_LoadIndividual value)? loadIndividual,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -591,6 +783,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
+    TResult Function(_LoadIndividual value)? loadIndividual,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

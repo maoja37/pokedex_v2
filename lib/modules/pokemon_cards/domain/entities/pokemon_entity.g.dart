@@ -8,11 +8,16 @@ part of 'pokemon_entity.dart';
 
 _$PokemonEntityImpl _$$PokemonEntityImplFromJson(Map<String, dynamic> json) =>
     _$PokemonEntityImpl(
-      id: json['id'] as String,
-      name: json['name'] as String,
-      images: Images.fromJson(json['images'] as Map<String, dynamic>),
-      abilities: (json['abilities'] as List<dynamic>)
-          .map((e) => AbilityEntity.fromJson(e as Map<String, dynamic>))
+      id: json['id'] as String?,
+      name: json['name'] as String?,
+      images: json['images'] == null
+          ? null
+          : Images.fromJson(json['images'] as Map<String, dynamic>),
+      level: json['level'] as String?,
+      supertype: json['supertype'] as String?,
+      hp: json['hp'] as String?,
+      abilities: (json['abilities'] as List<dynamic>?)
+          ?.map((e) => AbilityEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -21,6 +26,9 @@ Map<String, dynamic> _$$PokemonEntityImplToJson(_$PokemonEntityImpl instance) =>
       'id': instance.id,
       'name': instance.name,
       'images': instance.images,
+      'level': instance.level,
+      'supertype': instance.supertype,
+      'hp': instance.hp,
       'abilities': instance.abilities,
     };
 
